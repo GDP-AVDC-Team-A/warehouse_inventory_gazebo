@@ -1,0 +1,2105 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <plugin name='ros_interface_plugin' filename='librotors_gazebo_ros_interface_plugin.so'/>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>300 300</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>0</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>1623 256000000</sim_time>
+      <real_time>40 37776246</real_time>
+      <wall_time>1561546738 166421607</wall_time>
+      <iterations>36713</iterations>
+      <model name='CuboQR'>
+        <pose frame=''>7.49526 5.90214 1.56559 4e-06 -4e-06 0.001213</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.49526 5.90214 1.81559 4e-06 -4e-06 0.001213</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.063419 0.065045 -9.73143 -0.484921 0.681253 -0.603622</acceleration>
+          <wrench>0.024733 0.025367 -3.79526 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR10'>
+        <pose frame=''>7.33888 10.4762 1.56559 -1e-06 4e-06 -0.006027</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.33888 10.4762 1.81559 -1e-06 4e-06 -0.006027</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.447672 -2.7182 8.6005 1.5373 1.17929 3.04773</acceleration>
+          <wrench>-0.174592 -1.0601 3.3542 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR12'>
+        <pose frame=''>10.9014 9.46934 0.270546 1e-06 2e-06 -0.00234</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9014 9.46934 0.520546 1e-06 2e-06 -0.00234</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.066481 0.010914 -9.73196 0.01925 -0.20571 0.078582</acceleration>
+          <wrench>-0.025928 0.004256 -3.79547 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR14'>
+        <pose frame=''>10.9065 12.6307 0.911664 -2e-06 -2e-06 -0.001994</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9065 12.6307 1.16166 -2e-06 -2e-06 -0.001994</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>1.93966 0.712686 0.305677 -2.30586 1.26088 3.11678</acceleration>
+          <wrench>0.756468 0.277947 0.119214 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR15'>
+        <pose frame=''>10.8592 12.5814 0.270555 0 9e-06 0.006165</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.8592 12.5814 0.520555 0 9e-06 0.006165</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-1.77622 -0.286719 -5.76798 2.44269 0.476816 -3.14094</acceleration>
+          <wrench>-0.692727 -0.11182 -2.24951 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR17'>
+        <pose frame=''>11.0867 13.9659 1.16166 1.5708 -0 -1.57621</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.8367 13.9673 1.16166 1.5708 -0 -1.57621</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.335795 -0.007156 0.984365 0.653885 0.116375 4e-05</acceleration>
+          <wrench>0.13096 -0.002791 0.383903 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR19'>
+        <pose frame=''>10.6658 6.06998 1.81558 -0.373825 1.57077 -0.380281</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9158 6.06836 1.81559 -0.373825 1.57077 -0.380281</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-5.63687 4.39977 1.06943 -2.37161 -1.56699 0.327588</acceleration>
+          <wrench>-2.19838 1.71591 0.417076 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR2'>
+        <pose frame=''>7.44003 6.26658 0.911655 1.2e-05 -4e-06 -0.00564</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.44002 6.26658 1.16166 1.2e-05 -4e-06 -0.00564</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.408209 0.832374 -8.92232 -2.61498 -1.13784 2.93683</acceleration>
+          <wrench>0.159201 0.324626 -3.4797 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR20'>
+        <pose frame=''>10.6731 6.62514 0.520539 -1.25865 1.57077 -1.27424</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9231 6.62124 0.520541 -1.25865 1.57077 -1.27424</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-3.43375 4.06976 -4.96226 1.68271 -0.991924 -2.16476</acceleration>
+          <wrench>-1.33916 1.58721 -1.93528 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR26'>
+        <pose frame=''>11.1609 7.07821 1.16166 1.73977 -1.57078 -1.74086</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9109 7.07848 1.16166 1.73977 -1.57078 -1.74086</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.283043 -8.30838 3.69986 1.25329 -0.386578 0.946363</acceleration>
+          <wrench>-0.110387 -3.24027 1.44295 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR27'>
+        <pose frame=''>10.8989 10.7834 0.911656 0 -3e-06 -0.000849</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.8989 10.7834 1.16166 0 -3e-06 -0.000849</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.162064 -0.103272 -9.61105 1.3289 1.41826 0.311858</acceleration>
+          <wrench>0.063205 -0.040276 -3.74831 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR29'>
+        <pose frame=''>10.9446 10.1115 1.56557 1e-06 1e-06 0.026229</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>10.9446 10.1115 1.81557 1e-06 1e-06 0.026229</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.318451 1.52652 7.2025 -1.7094 -0.70841 -0.294918</acceleration>
+          <wrench>-0.124196 0.595343 2.80898 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR3'>
+        <pose frame=''>7.49653 6.91838 0.911657 3e-06 2.2e-05 -0.002844</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.49653 6.91838 1.16166 3e-06 2.2e-05 -0.002844</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.77888 0.156056 -8.98939 1.34422 1.05514 -2.27537</acceleration>
+          <wrench>-0.303763 0.060862 -3.50586 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR30'>
+        <pose frame=''>7.47403 9.14242 0.911658 -2e-06 8e-06 -0.022401</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.47404 9.14242 1.16166 -2e-06 8e-06 -0.022401</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.157685 -1.20525 6.10821 0.218322 -0.859234 3.01947</acceleration>
+          <wrench>0.061497 -0.470048 2.3822 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR32'>
+        <pose frame=''>7.44433 13.9504 1.56559 -8e-06 -4e-06 -0.023543</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.44433 13.9504 1.81559 -8e-06 -4e-06 -0.023543</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-1.43922 -0.30986 -0.80747 1.11655 0.475222 0.068286</acceleration>
+          <wrench>-0.561296 -0.120845 -0.314913 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR4'>
+        <pose frame=''>7.46043 7.53283 0.270555 -4e-05 -3e-05 -0.004785</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.46042 7.53285 0.520555 -4e-05 -3e-05 -0.004785</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.627766 -1.03732 -8.76268 0.388941 -0.191781 -1.30368</acceleration>
+          <wrench>0.244829 -0.404555 -3.41745 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR5'>
+        <pose frame=''>7.40212 13.9982 0.911663 2.1e-05 -1e-06 -0.003326</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.40212 13.9982 1.16166 2.1e-05 -1e-06 -0.003326</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.454419 6.05579 0.395609 2.38267 -0.039763 2.9418</acceleration>
+          <wrench>0.177224 2.36176 0.154287 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR6'>
+        <pose frame=''>7.40189 12.3347 0.91166 -3e-06 -2e-06 -0.001173</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.40189 12.3347 1.16166 -3e-06 -2e-06 -0.001173</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.811943 -0.264194 -3.2939 2.94029 0.718349 -3.07266</acceleration>
+          <wrench>-0.316658 -0.103035 -1.28462 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR8'>
+        <pose frame=''>7.41275 9.5667 1.56559 -1.6e-05 -0 0.002114</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.41275 9.5667 1.81559 -1.6e-05 -0 0.002114</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>1.44845 -5.53045 0.255789 -0.074887 -0.648053 -0.093197</acceleration>
+          <wrench>0.564897 -2.15687 0.099758 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='CuboQR9'>
+        <pose frame=''>7.39214 10.5905 0.270546 -1e-06 -4e-06 -0.003663</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.39214 10.5905 0.520546 -1e-06 -4e-06 -0.003663</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -3.822 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='Estanterias2'>
+        <pose frame=''>17.4434 15.1661 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_7'>
+          <pose frame=''>7.90141 9.97237 -0.244468 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_0'>
+        <pose frame=''>7.64825 5.17747 -1.1e-05 1e-06 0 -0.000638</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>7.64825 5.17747 -1.1e-05 1e-06 0 -0.000638</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.125 -0.006301 -10.8897 -0.096462 -0.012244 0.014647</acceleration>
+          <wrench>-0.125 -0.006301 -10.8897 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_0_clone'>
+        <pose frame=''>11.122 5.3816 0 0 0 -0.001569</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>11.122 5.3816 0 0 0 -0.001569</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.014828 -0.047609 10.064 -0.626675 0.653493 -0.137111</acceleration>
+          <wrench>-0.014828 -0.047609 10.064 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_clone'>
+        <pose frame=''>7.66831 8.4107 -7e-06 3e-06 -0 -0.000231</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>7.66831 8.4107 -7e-06 3e-06 -0 -0.000231</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.271158 0.016589 -5.2648 1.9112 -0.47537 -0.095925</acceleration>
+          <wrench>-0.271158 0.016589 -5.2648 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_clone_0'>
+        <pose frame=''>7.67477 11.6006 -4e-06 2e-06 0 -0.000636</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>7.67477 11.6006 -4e-06 2e-06 0 -0.000636</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.196381 -0.010145 -4.44779 1.5929 -0.193217 0.068919</acceleration>
+          <wrench>0.196381 -0.010145 -4.44779 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_clone_0_clone'>
+        <pose frame=''>11.0899 11.7702 0 0 0 -0.001721</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>11.0899 11.7702 0 0 0 -0.001721</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-4.2e-05 -3e-06 0.033346 0.390881 0.329307 3e-06</acceleration>
+          <wrench>-4.2e-05 -3e-06 0.033346 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='estanteria_clone_clone_clone'>
+        <pose frame=''>11.1374 8.5447 -2.7e-05 0 -0 0.006253</pose>
+        <scale>1 1 1</scale>
+        <link name='link_0'>
+          <pose frame=''>11.1374 8.5447 -2.7e-05 0 -0 0.006253</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.124196 -0.595343 -16.431 -0.558018 -0.063168 -0.004784</acceleration>
+          <wrench>0.124196 -0.595343 -16.431 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='qrware'>
+        <pose frame=''>7.98806 9.76227 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_2'>
+          <pose frame=''>4.56306 9.76227 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_3'>
+          <pose frame=''>7.98806 15.9373 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_4'>
+          <pose frame=''>11.4131 9.76227 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_6'>
+          <pose frame=''>7.98806 3.58727 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>5.82467 13.4626 89.5058 0 1.5698 0.008141</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='estanteria_clone_clone'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.67453 13.6998 0.05 0 -0 0.000642</pose>
+    </model>
+    <model name='estanteria_clone_0'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.66906 5.2026 0.05 2e-06 -0 0.0001</pose>
+    </model>
+    <model name='estanteria_clone_clone_0'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.62659 13.7291 0.05 0 -0 0.000642</pose>
+    </model>
+    <model name='estanteria_clone_clone_clone'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.66254 21.8813 0.05 0 -0 0.000642</pose>
+    </model>
+    <model name='CuboQR'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR/materials/scripts</uri>
+              <uri>model://CuboQR/materials/textures</uri>
+              <name>CuboQR/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.65221 5.78254 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR2'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR2/materials/scripts</uri>
+              <uri>model://CuboQR2/materials/textures</uri>
+              <name>CuboQR2/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.61192 6.45449 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR3'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR3/materials/scripts</uri>
+              <uri>model://CuboQR3/materials/textures</uri>
+              <name>CuboQR3/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.49202 6.92058 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR4'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR4/materials/scripts</uri>
+              <uri>model://CuboQR4/materials/textures</uri>
+              <name>CuboQR4/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.45435 7.537 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR5'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR5/materials/scripts</uri>
+              <uri>model://CuboQR5/materials/textures</uri>
+              <name>CuboQR5/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.48186 16.1215 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR6'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR6/materials/scripts</uri>
+              <uri>model://CuboQR6/materials/textures</uri>
+              <name>CuboQR6/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.40807 15.5347 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR8'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR8/materials/scripts</uri>
+              <uri>model://CuboQR8/materials/textures</uri>
+              <name>CuboQR8/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.47563 24.3473 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR9'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR9/materials/scripts</uri>
+              <uri>model://CuboQR9/materials/textures</uri>
+              <name>CuboQR9/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.50917 23.8288 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR10'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR10/materials/scripts</uri>
+              <uri>model://CuboQR10/materials/textures</uri>
+              <name>CuboQR10/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>7.43301 23.2943 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR12'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR12/materials/scripts</uri>
+              <uri>model://CuboQR12/materials/textures</uri>
+              <name>CuboQR12/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>13.994 23.9278 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR14'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR14/materials/scripts</uri>
+              <uri>model://CuboQR14/materials/textures</uri>
+              <name>CuboQR14/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.0934 15.7214 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR15'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR15/materials/scripts</uri>
+              <uri>model://CuboQR15/materials/textures</uri>
+              <name>CuboQR15/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.1323 15.2519 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR17'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR17/materials/scripts</uri>
+              <uri>model://CuboQR17/materials/textures</uri>
+              <name>CuboQR17/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.1617 14.1957 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR19'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR19/materials/scripts</uri>
+              <uri>model://CuboQR19/materials/textures</uri>
+              <name>CuboQR19/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>21.0666 7.65732 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR20'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR20/materials/scripts</uri>
+              <uri>model://CuboQR20/materials/textures</uri>
+              <name>CuboQR20/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>21.0777 6.93045 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR26'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR26/materials/scripts</uri>
+              <uri>model://CuboQR26/materials/textures</uri>
+              <name>CuboQR26/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>21.0901 14.3452 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR27'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR27/materials/scripts</uri>
+              <uri>model://CuboQR27/materials/textures</uri>
+              <name>CuboQR27/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>20.8518 24.2926 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR29'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR29/materials/scripts</uri>
+              <uri>model://CuboQR29/materials/textures</uri>
+              <name>CuboQR29/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>20.9075 23.283 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR30'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR30/materials/scripts</uri>
+              <uri>model://CuboQR30/materials/textures</uri>
+              <name>CuboQR30/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>27.9581 24.4136 0 0 -0 0</pose>
+    </model>
+    <model name='CuboQR32'>
+      <link name='link'>
+        <pose frame=''>0 0 0.25 0 -0 0</pose>
+        <inertial>
+          <mass>0.39</mass>
+          <inertia>
+            <ixx>0.00058</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00058</iyy>
+            <iyz>0</iyz>
+            <izz>0.00019</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.4 0.4 0.4</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://CuboQR32/materials/scripts</uri>
+              <uri>model://CuboQR32/materials/textures</uri>
+              <name>CuboQR32/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>27.8927 23.4873 0 0 -0 0</pose>
+    </model>
+    <model name='estanteria_clone_clone_0_clone'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.0644 13.7599 -2.8e-05 0 -0 0.000415</pose>
+    </model>
+    <model name='estanteria_clone_0_clone'>
+      <link name='link_0'>
+        <pose frame=''>-0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>16.6667</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>16.6667</iyy>
+            <iyz>0</iyz>
+            <izz>16.6667</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://estanteria/estanteria.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>14.0774 5.38261 -3e-05 -1e-06 0 0.000548</pose>
+    </model>
+    <model name='Estanterias2'>
+      <link name='Wall_7'>
+        <pose frame=''>-9.54199 -5.19373 -0.244468 0 -0 1.5708</pose>
+        <inertial>
+          <inertia>
+            <ixx>0</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0</iyy>
+            <iyz>0</iyz>
+            <izz>0</izz>
+          </inertia>
+          <mass>0</mass>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+        </inertial>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <visual name='Wall_7_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>9.74609 0.15 2.08966</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+            <shader type='pixel'/>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='Wall_7_Collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>9.74609 0.15 2.08966</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>17.4434 15.1661 0 0 -0 0</pose>
+    </model>
+    <model name='qrware'>
+      <pose frame=''>7.98806 9.76227 0 0 -0 0</pose>
+      <link name='Wall_2'>
+        <pose frame=''>-3.425 0 0 0 -0 1.5708</pose>
+        <visual name='Wall_2_Visual_0'>
+          <pose frame=''>-5.51907 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>1.46186 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <collision name='Wall_2_Collision_0'>
+          <geometry>
+            <box>
+              <size>1.46186 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>-5.51907 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_2_Visual_1'>
+          <pose frame=''>1.18093 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>10.1381 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <collision name='Wall_2_Collision_1'>
+          <geometry>
+            <box>
+              <size>10.1381 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>1.18093 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_2_Visual_2'>
+          <pose frame=''>-4.33814 0 2.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.9 0.15 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <collision name='Wall_2_Collision_2'>
+          <geometry>
+            <box>
+              <size>0.9 0.15 0.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>-4.33814 0 2.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_3'>
+        <collision name='Wall_3_Collision'>
+          <geometry>
+            <box>
+              <size>7 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_3_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>7 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>0 6.175 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_4'>
+        <collision name='Wall_4_Collision'>
+          <geometry>
+            <box>
+              <size>12.5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_4_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>12.5 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>3.425 0 0 0 0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_6'>
+        <collision name='Wall_6_Collision'>
+          <geometry>
+            <box>
+              <size>7 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_6_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>7 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose frame=''>0 -6.175 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+  </world>
+</sdf>
+
